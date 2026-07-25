@@ -70,7 +70,7 @@ MoneyFlow/
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/MoneyFlow.git
+git clone [https://github.com/yourusername/MoneyFlow.git](https://abd-elsamad.github.io/Expense-Tracker/)
 ```
 
 Open the project
@@ -81,13 +81,10 @@ cd MoneyFlow
 
 Run the project
 
-Simply open **index.html**
 
-or use
 
 ```bash
-Live Server
-```
+(https://expense-tracker-nine-omega-54.vercel.app/)```
 
 ---
 
