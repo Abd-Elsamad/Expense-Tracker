@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Expense Tracker - Track your income and expenses with a clean and responsive interface.">
+
+    <meta name="keywords"
+        content="Expense Tracker, Budget, Finance, JavaScript, HTML, CSS">
+
+    <meta name="author" content="SMEDO">
+
+    <title>Expense Tracker | SMEDO</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= Header ================= -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <a href="#" class="logo">
+                <i class="fa-solid fa-wallet"></i>
+                Expense Tracker
+            </a>
+
+            <button class="theme-btn" aria-label="Toggle Theme">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= Main ================= -->
+
+    <main>
+
+        <!-- ================= Dashboard ================= -->
+
+        <section class="dashboard">
+
+            <div class="container">
+
+                <div class="card balance-card">
+
+                    <span>Total Balance</span>
+
+                    <h2 id="balance">
+                        $0.00
+                    </h2>
+
+                </div>
+
+
+                <div class="card income-card">
+
+                    <span>Total Income</span>
+
+                    <h2 id="income">
+                        $0.00
+                    </h2>
+
+                </div>
+
+
+                <div class="card expense-card">
+
+                    <span>Total Expenses</span>
+
+                    <h2 id="expense">
+                        $0.00
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= Transaction Form ================= -->
+
+        <section class="transaction-form">
+
+            <div class="container">
+
+                <h2>Add Transaction</h2>
+
+                <form id="transactionForm">
+
+                    <div class="form-group">
+
+                        <label for="description">
+
+                            Description
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="description"
+                            placeholder="Enter description"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="amount">
+
+                            Amount
+
+                        </label>
+
+                        <input
+                            type="number"
+                            id="amount"
+                            placeholder="0.00"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="category">
+
+                            Category
+
+                        </label>
+
+                        <select id="category">
+
+                            <option value="Food">Food</option>
+
+                            <option value="Shopping">Shopping</option>
+
+                            <option value="Transportation">Transportation</option>
+
+                            <option value="Bills">Bills</option>
+
+                            <option value="Health">Health</option>
+
+                            <option value="Salary">Salary</option>
+
+                            <option value="Freelance">Freelance</option>
+
+                            <option value="Entertainment">Entertainment</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="date">
+
+                            Date
+
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="type">
+
+                            Transaction Type
+
+                        </label>
+
+                        <select id="type">
+
+                            <option value="income">
+                                Income
+                            </option>
+
+                            <option value="expense">
+                                Expense
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Transaction
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= Transactions ================= -->
+
+        <section class="transactions">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <h2>
+
+                        Transaction History
+
+                    </h2>
+
+                    <input
+                        type="search"
+                        id="search"
+                        placeholder="Search...">
+
+                </div>
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Description</th>
+
+                                <th>Category</th>
+
+                                <th>Amount</th>
+
+                                <th>Date</th>
+
+                                <th>Type</th>
+
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="transactionList">
+
+                            <!-- JavaScript -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= Analytics ================= -->
+
+        <section class="analytics">
+
+            <div class="container">
+
+                <h2>
+
+                    Analytics
+
+                </h2>
+
+                <canvas id="expenseChart"></canvas>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= Footer ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+
+                © 2026 SMEDO. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
