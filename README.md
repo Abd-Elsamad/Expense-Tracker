@@ -6,20 +6,13 @@ MoneyFlow helps users manage their daily finances by tracking income and expense
 
 ---
 
-## 📸 Preview
 
-> Add screenshots inside the `/assets/images` folder.
 
-| Dashboard | Transactions |
-|-----------|--------------|
-| ![](assets/images/dashboard.png) | ![](assets/images/transactions.png) |
 
----
 
 # 🚀 Live Demo
 
-https://your-demo-link.vercel.app
-
+(https://expense-tracker-nine-omega-54.vercel.app/)
 ---
 
 # ✨ Features
